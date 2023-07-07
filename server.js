@@ -3,7 +3,21 @@ const app = express()
 const PORT = 8000
 
 const rappers = {
-    'birthname': 'whoCares'
+    '21 savage': {
+        'age': 29,
+        'birthName': 'Shéyaa Bin Abraham-Joseph',
+        'birthLocation': 'London, England'
+    },
+    'chance the rapper':{
+        'age': 29,
+        'birthName': 'Chancelor Bennett',
+        'birthLocation': 'Chicago, Illinois' 
+    },
+    'unknown':{
+        'age': 0,
+        'birthName': 'unknown',
+        'birthLocation': 'unknown'
+    }
 }
 
 app.get('/', (request,response)=>{
