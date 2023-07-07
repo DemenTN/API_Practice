@@ -3,7 +3,7 @@ const app = express()
 const PORT = 8000
 
 const rappers = {
-    'birthName': 'whoCares'
+    'birthname': 'whoCares'
 }
 
 app.get('/', (request,response)=>{
@@ -19,6 +19,7 @@ app.get('/api/:name',(request,response)=>{
     }
 })
 
-app.listen(PORT, ()=> {
+//in example, heroku needed this process.env.PORT. render worked fine without
+app.listen(process.env.PORT || PORT, ()=> {
     console.log(`The server is running on port ${PORT}`)
 })
